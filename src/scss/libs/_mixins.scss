@@ -1,0 +1,66 @@
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
+
+	text-decoration: none;
+
+	&:#{$where} {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+
+	}
+
+}
+
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
+
+	@if $important {
+		$important: '!important';
+	}
+
+	$x: 0.1em;
+
+	@if unit($element-margin) == 'rem' {
+		$x: 0.1rem;
+	}
+
+	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max($x, $tb - $element-margin + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
+}
+
+/// Wraps @content in a @media block targeting a specific orientation.
+/// @param {string} $orientation Orientation.
+@mixin orientation($orientation) {
+	@media screen and (orientation: #{$orientation}) {
+		@content;
+	}
+}
+
+@mixin for-size($size) {
+	@if $size == xsmall {
+		@media screen and (max-width : 480px) {@content;}
+	} @else if $size == small {
+		@media screen and (max-width : 736px) {@content;}
+	} @else if $size == medium {
+		@media screen and (max-width : 980px) {@content;}
+	} @else if $size == large {
+		@media screen and (max-width: 1280px) { @content; }
+	} @else if $size == xlarge {
+		@media screen and (min-width: 1680px) { @content; }
+	}
+}

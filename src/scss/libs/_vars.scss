@@ -1,0 +1,54 @@
+// Font Settings
+$ffamily: "Lato", sans-serif;
+$fheader: "Lobster Two", cursive;
+$fweight: 300;
+$fweight-bold: 700;
+$letter-spacing: 0.025em;
+$letter-spacing-alt: 0.1em;
+
+// Colors
+$bg: #ffffff;
+$fg: #363959;
+$accent: #15959f;
+$accent-dark: darken($accent, 10);
+$border: rgba(160, 160, 160, 0.3);
+$border-bg: #34363b;
+$overlay: rgba(54, 54, 87, 0.9);
+$gradient: linear-gradient(to right top, #8a2387, #e94057);
+$gradient2: linear-gradient(to right, $accent-dark, $accent, $bg);
+
+// Sizes
+$border-radius: 5rem;
+$border-radius2: 5px;
+$border-width: 1px;
+$element-height: 2.75rem;
+$element-margin: 2rem;
+$header: 4em;
+$padding: 2em;
+$padding-default: 7rem;
+$padding-xlarge: 5rem;
+$padding-large: 4rem;
+$padding-medium: 3rem;
+$padding-small: 2rem;
+$padding-xsmall: 1rem;
+$inner: 64rem;
+
+// Misc
+$z-index: 10000;
+
+// Transitions;
+$transition: 0.4s ease-in-out;
+$shadow-transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// Shadows
+$shadow-normal: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-hover: 0 14px 28px rgba(0, 0, 0, 0.35), 0 10px 10px rgba(0, 0, 0, 0.32);
+$shadow-hover2: 0 14px 28px rgba(255, 140, 168, 0.35),
+  0 10px 10px rgba(255, 140, 168, 0.32);
+
+// Media Query Sizes
+// $xlarge: 'only screen and (max-width : 1680px)';
+// $large: 'only screen and (max-width : 1280px)';
+// $medium: 'only screen and (max-width : 980px)';
+// $small: 'only screen and (max-width : 736px)';
+// $xsmall: 'only screen and (max-width : 480px)';

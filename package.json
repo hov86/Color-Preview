@@ -1,0 +1,41 @@
+{
+  "name": "color-preview",
+  "version": "1.0.0",
+  "description": "This project allows you to enter a hex code in the input field and the output will change the background of the page to that color.",
+  "main": "app.js",
+  "presets": [
+    "env"
+  ],
+  "scripts": {
+    "babel": "babel --presets es2015 app.js -o assets/js/main.js",
+    "webpack": "webpack --progress --watch",
+    "start": "browser-sync start --server --files '**/*.css, **/*.scss, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hov86/Color-Preview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hov86/Color-Preview/issues"
+  },
+  "homepage": "https://github.com/hov86/Color-Preview#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.6",
+    "color-convert": "^1.9.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
